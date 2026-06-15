@@ -276,11 +276,16 @@ if arquivo_bancario is not None:
         st.subheader("✅ Arquivo processado com sucesso!")
 
         if tem_pix:
-            # Gera PIX e G lado a lado
+        # Gera PIX e G lado a lado
             valor_centavos = int(round(valor_editado * 100))
             valor_formatado = str(valor_centavos).zfill(15)
             qtd_formatada = str(qtd_linhas_total).zfill(5)
             linha_total = f"DIARIO      {valor_formatado}00000000000{qtd_formatada}"
+
+    # 🔥 CORREÇÃO: Adiciona o cabeçalho no início
+        if cabecalho_g:
+            novas_linhas_pix.insert(0, cabecalho_g)
+
             novas_linhas_pix.append(linha_total)
             novas_linhas_pix.append("")
             conteudo_pix_atualizado = "\n".join(novas_linhas_pix)
