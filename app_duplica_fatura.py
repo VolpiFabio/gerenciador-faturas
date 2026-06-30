@@ -3,7 +3,7 @@ import re
 
 st.set_page_config(page_title="Gerenciador de Faturas Pix/G", layout="wide")
 
-st.title("📄 Gerenciador de Faturas Pix e G")
+st.title("📄 Gerenciador de Faturas Arrecadação")
 
 # --- INÍCIO DO BOTÃO DO MANUAL ---
 try:
